@@ -1,0 +1,20 @@
+[
+    {
+        "city": "Los Angeles",
+        "temperature_F": 70.32,
+        "weather_description": "scattered clouds",
+        "humidity_percent": 67
+    },
+    {
+        "city": "San Francisco",
+        "temperature_F": 62.82,
+        "weather_description": "broken clouds",
+        "humidity_percent": 76
+    },
+    {
+        "city": "Seattle",
+        "temperature_F": 66.56,
+        "weather_description": "broken clouds",
+        "humidity_percent": 53
+    }
+]
