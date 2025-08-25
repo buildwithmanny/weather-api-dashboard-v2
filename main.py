@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 PROJECT_DIR = Path(__file__).resolve().parent  # <— always the folder main.py lives in
 load_dotenv(PROJECT_DIR / ".env")              # <— explicitly load .env from the project
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
-print(f"🔍 DEBUG — API KEY Loaded: {bool(API_KEY)}")
+print(f" DEBUG — API KEY Loaded: {bool(API_KEY)}")
 
 # ======= SETTINGS =======
 CITIES = ["Los Angeles", "San Francisco", "Seattle", "New York", "Miami", "San Diego"]
@@ -79,7 +79,7 @@ def append_csv(records, csv_path: Path):
         if not exists:
             writer.writeheader()
         writer.writerows(records)
-    logging.info(f"📈 Appended {len(records)} rows → {csv_path}")
+    logging.info(f" Appended {len(records)} rows → {csv_path}")
 
 def load_dataframe(csv_path: Path):
     if not csv_path.exists():
@@ -134,7 +134,7 @@ def plot_from_csv(csv_path: Path, visuals_dir: Path, last=400, resample=None, ci
     latest = visuals_dir / "temperature_trend_latest.png"
     plt.savefig(latest, dpi=150)
     plt.close()
-    logging.info(f"🖼️ Hybrid line + dot plot saved: {latest}")
+    logging.info(f" Hybrid line + dot plot saved: {latest}")
 
 # ======= CLI (optional filters) =======
 def parse_args():
